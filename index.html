@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Another One NFC (Local)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ======= SCREEN 1: OVERVIEW (九宫格) ======= -->
+  <div id="screen-overview" class="screen">
+
+    <div class="grid">
+      <div class="slot" data-slot="0"></div>
+      <div class="slot" data-slot="1"></div>
+      <div class="slot" data-slot="2"></div>
+      <div class="slot" data-slot="3"></div>
+      <div class="slot" data-slot="4"></div>
+      <div class="slot" data-slot="5"></div>
+      <div class="slot" data-slot="6"></div>
+      <div class="slot" data-slot="7"></div>
+      <div class="slot" data-slot="8"></div>
+    </div>
+
+    <div class="bottom-bar">
+      <button id="clear-btn" class="btn-pill btn-pill-small">Clear!</button>
+      <img src="gift.png" class="gift-icon" alt="gift">
+    </div>
+  </div>
+
+
+  <!-- ======= SCREEN 2: DETAIL PAGE ======= -->
+  <div id="screen-detail" class="screen hidden">
+
+    <button id="back-btn" class="back-btn">&lt;</button>
+
+    <div class="detail-image-wrapper">
+      <img id="detail-image" class="detail-image" alt="">
+    </div>
+
+    <div class="detail-name">
+      <input id="name-input" type="text" placeholder="Name">
+    </div>
+
+    <button id="upload-btn" class="btn-pill btn-pill-large btn-primary">
+      Upload picture
+    </button>
+
+    <button id="labels-btn" class="btn-pill btn-pill-large btn-secondary">
+      Add labels
+    </button>
+
+    <!-- 隐藏文件选择 input -->
+    <input id="file-input" type="file" accept="image/*" style="display: none;">
+      <!-- 详情页内部其它内容... -->
+
+  <!-- ======= Label 弹窗 ======= -->
+  <div id="label-modal" class="label-modal hidden">
+    <div class="label-modal-card">
+      <div class="label-input-wrapper">
+        <textarea id="label-input" class="label-input" placeholder="Type something..."></textarea>
+      </div>
+      <button id="label-add-btn" class="btn-label-add">+ Add</button>
+
+      <div id="label-list" class="label-list">
+        <!-- 这里会用 JS 填充 label 项 -->
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- 不再引入任何 Firebase，只引 app.js -->
+  <script src="app.js"></script>
+</body>
+</html>

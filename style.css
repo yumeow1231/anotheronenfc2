@@ -1,0 +1,209 @@
+/* ======= 基础设置 ======= */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f3f3f3;
+}
+
+.screen {
+  max-width: 390px;
+  height: 100vh;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 16px 16px 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ======= 九宫格 ======= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.slot {
+  background: #e5e5e5;
+  padding-top: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.slot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ======= 底部按钮区域 ======= */
+.bottom-bar {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 礼物 icon */
+.gift-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* ======= 按钮（圆角100） ======= */
+.btn-pill {
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Clear 按钮尺寸：181×64 */
+.btn-pill-small {
+  width: 181px;
+  height: 64px;
+  font-size: 20px;
+  background: #ABA2FF;
+}
+
+/* 大按钮尺寸：340×54 */
+.btn-pill-large {
+  width: 340px;
+  height: 54px;
+  font-size: 18px;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+/* Upload picture：5445E4 */
+.btn-primary {
+  background: #5445E4;
+}
+
+/* Add labels + Clear：ABA2FF */
+.btn-secondary {
+  background: #ABA2FF;
+}
+
+/* ======= Detail Page ======= */
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.detail-image-wrapper {
+  margin-top: 24px;
+  width: 100%;
+  padding-top: 120%;
+  background: #e5e5e5;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-name {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+#name-input {
+  border: none;
+  border-bottom: 2px solid #000;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+}
+/* ----- 弹窗遮罩层 ----- */
+.label-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 点击事件可用 */
+  pointer-events: auto;
+}
+
+/* 隐藏状态 */
+.hidden {
+  display: none;
+}
+
+/* ----- 弹窗卡片 ----- */
+.label-modal-card {
+  width: 90%;
+  max-width: 340px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  padding: 16px;
+  box-sizing: border-box;
+
+  /* 阻止点击卡片时冒泡到背景 */
+  pointer-events: auto;
+}
+
+/* ----- 输入区域 ----- */
+.label-input-wrapper {
+  background: #e5e5e5;
+  height: 140px;
+  padding: 8px;
+}
+
+.label-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+}
+
+/* ----- 按钮 ----- */
+.btn-label-add {
+  margin-top: 12px;
+  width: 100px;
+  height: 30px;
+  border-radius: 100px;
+  background: #ABA2FF;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+
+/* ----- label 列表 ----- */
+.label-list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label-item {
+  background: #e5e5e5;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
